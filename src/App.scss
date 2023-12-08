@@ -1,0 +1,315 @@
+:root {
+  --primary-color: #003366; /* Navy Blue */
+  --secondary-color: #7da2a9; /* Soft Teal */
+  --background-color: #f4f4f4; /* Light Grey */
+  --accent-color: #f0a30a; /* Warm Orange */
+  --text-color: #333333; /* Dark Grey */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  nav {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    a {
+      color: white;
+      text-decoration: none;
+      margin-right: 2rem;
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    
+    &.primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    &.secondary {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+    
+    &.accent {
+      background-color: var(--accent-color);
+      color: white;
+    }
+  }
+  
+  header {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  section {
+    padding: 1rem;
+    margin: 1rem;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        background-color: white;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        border-left: 4px solid var(--accent-color);
+        transition: all 0.3s;
+  
+        &:hover {
+          background-color: var(--secondary-color);
+          border-left: 4px solid (var(--accent-color), 10%);
+        }
+      }
+    }
+  }
+  
+  .alert {
+    color: var(--accent-color);
+    font-weight: bold;
+  }
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    position: relative;
+  }
+}
+
+.ticket-submit-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  label {
+    display: block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+  }
+
+  input[type="text"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+      border-color: var(--accent-color);
+    }
+  }
+
+  input[type="file"] {
+    margin-top: 0.5rem;
+  }
+
+  input[type="submit"] {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+}
+
+
+.auth-page {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h1 {
+    color: var(--primary-color);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid var(--secondary-color);
+      border-radius: 4px;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+      }
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  button {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+.about-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h1, h2 {
+    color: var(--primary-color);
+  }
+
+  p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      background-color: var(--secondary-color);
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 4px;
+      color: white;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+}
+
+.admin-page {
+  .admin-navigation {
+    width: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: start; // Align buttons to the left
+    align-items: center; // Align items vertically
+    padding: 0.5rem; // Reduced vertical padding
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      margin-right: auto; // Space after the title
+    }
+
+    button {
+      color: white;
+      background: none;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem; // Space between buttons
+      transition: background-color 0.3s;
+      cursor: pointer;
+
+      &:hover, &.active {
+        border: 2px solid var(--accent-color);
+        border-radius: 10%;
+      }
+    }
+
+    .nav-icons {
+      margin-left: auto; // Push to the right side
+      display: flex;
+      align-items: center;
+      padding: 0rem 2.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .admin-content {
+    padding: 2rem;
+    margin-top: 3rem; // Provide space for the top nav
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 3rem); // Height minus the nav bar
+    width: calc(100% - 4rem); // Account for padding
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
